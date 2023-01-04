@@ -63,17 +63,24 @@ class MyHomepage extends StatelessWidget {
                       ),
                     ),
                     padding: EdgeInsets.all(10),
-                    child: Text(tr.value.toString()),
+                    child: Text(
+                      'R\$ ${tr.value.toStringAsFixed(2)}',
+                    ),
                   ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(tr.title),
+                      Text(
+                        tr.title,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
                       Text(
                         tr.date.toString(),
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.purple,
+                          color: Colors.grey,
                         ),
                       ),
                     ],
