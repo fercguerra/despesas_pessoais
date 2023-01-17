@@ -10,7 +10,6 @@ class ExpensesApp extends StatelessWidget {
   const ExpensesApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    
     return const MaterialApp(home: MyHomePage());
   }
 }
@@ -49,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _transactions.add(newTransaction);
     });
+
+    Navigator.of(context).pop(); //tira o elemento da pilha
   }
 
   _openTransactionFormModal(BuildContext context) {
