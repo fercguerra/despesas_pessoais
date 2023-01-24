@@ -1,6 +1,5 @@
 import 'package:despesas_pessoais/models/transaction.dart';
 import 'package:flutter/material.dart';
-import 'package:despesas_pessoais/models/transaction.dart';
 import 'package:intl/intl.dart';
 
 class Chart extends StatelessWidget {
@@ -35,6 +34,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    gruoupedTransactions;
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
